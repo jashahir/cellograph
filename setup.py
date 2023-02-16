@@ -18,7 +18,7 @@ install_requires = [
     "spektral"
 ]
 
-version = '0.0.1' 
+version = '0.0.2' 
 
 readme = open("README.md").read()
 
@@ -29,6 +29,7 @@ setup(
     author="Jamshaid Shahir, Purvis Lab, University of North Carolina at Chapel Hill",
     author_email="jashahir@live.unc.edu",
     packages=find_packages(),
+    install_requires = install_requires,
     license="MIT License - See LICENSE file",
     python_requires=">=3.8",
     long_description=readme,
@@ -51,34 +52,3 @@ setup(
 
 # get location of setup.py
 setup_dir = os.path.dirname(os.path.realpath(__file__))
-
-
-
-
-VERSION = '0.0.1' 
-DESCRIPTION = 'A graph neural network model to learn latent information in multi-condition single-cell genomics data'
-LONG_DESCRIPTION = '''
-This is a two-layer graph neural network that takes as input a neighborhood graph of single-cell data spanning two or more biological conditions/treatments, and learns the difference between these conditions in such a way that''s amenable to visualization and clustering
-'''
-# Setting up
-setup(
-       # the name must match the folder name 'verysimplemodule'
-        name="cellograph", 
-        version=VERSION,
-        author="Jamshaid Shahir",
-        author_email="<jashahir@live.unc.edu>",
-        description=DESCRIPTION,
-        long_description=LONG_DESCRIPTION,
-        packages=find_packages(),
-        install_requires=[], # add any additional packages that 
-        # needs to be installed along with your package. Eg: 'caer'
-        
-        keywords=['python', 'gnn', 'single-cell', 'genomics'],
-        classifiers= [
-            "Development Status :: 3 - Alpha",
-            "Intended Audience :: Researchers",
-            "Programming Language :: Python :: 3",
-            "Operating System :: MacOS :: MacOS X",
-            "Operating System :: Microsoft :: Windows",
-        ]
-)
